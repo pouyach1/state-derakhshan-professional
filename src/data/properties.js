@@ -1,5 +1,7 @@
+
 /**
  * Static property catalog for Derakhshan Real Estate.
+ * Karaj-focused editorial property catalog.
  * Images: curated Unsplash architecture photography.
  */
 
@@ -38,9 +40,9 @@ export const BEDROOM_OPTIONS = [
 
 export const properties = [
   {
-    id: 'zafaraniyeh-terrace',
-    slug: 'penthouse-zafaraniyeh-terrace',
-    title: 'پنت‌هاوس تراس‌دار زعفرانیه',
+    id: 'mehrshahr-terrace-penthouse',
+    slug: 'penthouse-mehrshahr-terrace',
+    title: 'پنت‌هاوس تراس‌دار مهرشهر',
     location: 'مهرشهر',
     district: 'کرج',
     price: 98000000000,
@@ -62,9 +64,9 @@ export const properties = [
       img('photo-1600585154340-be6161a56a0c'),
     ],
     description:
-      'پنت‌هاوسی با نور شمال‌غربی، تراس وسیع و چشم‌انداز پیوسته به کوه‌های البرز. فضاها با متریال طبیعی، خطوط آرام و جزئیات دقیق طراحی شده‌اند تا سکونت روزمره کیفیتی ماندگار داشته باشد.',
+      'پنت‌هاوسی شاخص در مهرشهر با تراس وسیع، نور طبیعی فراوان و چشم‌اندازی باز. طراحی داخلی بر پایه متریال طبیعی، خطوط آرام و جزئیات اجرایی دقیق شکل گرفته است.',
     story:
-      'این واحد برای کسانی انتخاب شده که سکوت محله، ارتفاع مناسب و کیفیت ساخت را به متراژ صرف ترجیح می‌دهند.',
+      'این خانه برای کسانی انتخاب شده که کیفیت ساخت، آرامش محله و ارتباط مستقیم با فضای بیرون را به متراژ صرف ترجیح می‌دهند.',
     amenities: [
       'تراس ۳۵ متری',
       'آشپزخانه جزیره‌ای',
@@ -73,12 +75,13 @@ export const properties = [
       'لابی اختصاصی',
       'استخر و سونا',
     ],
-    coordinates: { lat: 35.833, lng: 50.935 },
+    coordinates: { lat: 35.7608, lng: 50.9458 },
   },
+
   {
-    id: 'elahiyeh-garden',
-    slug: 'villa-elahiyeh-garden',
-    title: 'ویلای باغی الهیه',
+    id: 'azimiye-garden-villa',
+    slug: 'villa-azimiye-garden',
+    title: 'ویلای باغی عظیمیه',
     location: 'عظیمیه',
     district: 'کرج',
     price: 185000000000,
@@ -100,9 +103,9 @@ export const properties = [
       img('photo-1600573472592-401b489a3cdc'),
     ],
     description:
-      'ویلایی مستقل با حیاط خصوصی، استخر روباز و معماری معاصر که میان فضای سبز و حجم‌های سنگی تعادل برقرار کرده است. مناسب سکونت خانوادگی با نیاز به حریم کامل.',
+      'ویلایی مستقل در عظیمیه با حیاط خصوصی، استخر روباز و معماری معاصر. ترکیب فضای سبز، حجم‌های سنگی و بازشوهای بزرگ، محیطی آرام و خصوصی برای سکونت خانوادگی ایجاد کرده است.',
     story:
-      'موقعیت ملک امکان دسترسی آرام به محله‌های مجاور را فراهم می‌کند؛ بدون از دست دادن حس خلوت.',
+      'موقعیت ملک دسترسی مناسبی به محورهای اصلی کرج فراهم می‌کند، در حالی که فضای داخلی حس خلوت و استقلال یک خانه ویلایی را حفظ کرده است.',
     amenities: [
       'حیاط ۵۰۰ متری',
       'استخر روباز',
@@ -111,12 +114,13 @@ export const properties = [
       'سیستم امنیتی',
       'چیلر مرکزی',
     ],
-    coordinates: { lat: 35.835, lng: 51.005 },
+    coordinates: { lat: 35.8298, lng: 51.0104 },
   },
+
   {
-    id: 'fereshteh-light',
-    slug: 'apartment-fereshteh-light',
-    title: 'آپارتمان نورگیر فرشته',
+    id: 'mesbah-south-light',
+    slug: 'apartment-mesbah-south-light',
+    title: 'آپارتمان نورگیر مصباح',
     location: 'مصباح',
     district: 'کرج',
     price: 52000000000,
@@ -138,8 +142,9 @@ export const properties = [
       img('photo-1484154216822-a623401771c7'),
     ],
     description:
-      'آپارتمانی بازسازی‌شده با پلان کارآمد، نور جنوبی و جزئیات اجرایی تمیز. مناسب سکونت شهری در قلب محله مصباح با دسترسی پیاده به کافه‌ها و خدمات روزمره.',
-    story: 'انتخابی دقیق برای کسانی که کیفیت زندگی شهری را به متراژ افراطی ترجیح می‌دهند.',
+      'آپارتمانی بازسازی‌شده در مصباح با پلان کارآمد، نور طبیعی مناسب و جزئیات اجرایی تمیز. طراحی داخلی ساده و متعادل، فضا را برای زندگی روزمره و استفاده خانوادگی آماده کرده است.',
+    story:
+      'انتخابی دقیق برای کسانی که کیفیت زندگی شهری، دسترسی مناسب و طراحی داخلی منسجم را به متراژ افراطی ترجیح می‌دهند.',
     amenities: [
       'بالکن جنوبی',
       'کابینت سفارشی',
@@ -148,12 +153,13 @@ export const properties = [
       'نگهبانی ۲۴ ساعته',
       'آسانسور دوبل',
     ],
-    coordinates: { lat: 35.82, lng: 50.98 },
+    coordinates: { lat: 35.8168, lng: 50.9685 },
   },
+
   {
-    id: 'niavaran-horizon',
-    slug: 'penthouse-niavaran-horizon',
-    title: 'پنت‌هاوس افق نیاوران',
+    id: 'fardis-horizon-penthouse',
+    slug: 'penthouse-fardis-horizon',
+    title: 'پنت‌هاوس افق فردیس',
     location: 'فردیس',
     district: 'کرج',
     price: 72000000000,
@@ -175,8 +181,9 @@ export const properties = [
       img('photo-1600047509358-9dc435629748'),
     ],
     description:
-      'واحدی در آخرین طبقه با سقف بلند، شیشه‌های سرتاسری و چشم‌انداز دوردست. طراحی داخلی مینیمال، تأکید بر نور و سکوت فضا.',
-    story: 'برای سکونت آرام در ارتفاع، با فاصله‌ای هوشمندانه از ازدحام خیابان.',
+      'واحدی در آخرین طبقه با سقف بلند، شیشه‌های سرتاسری و چشم‌انداز باز. طراحی داخلی مینیمال، نور طبیعی و خطوط ساده، شخصیت اصلی این خانه را شکل می‌دهند.',
+    story:
+      'برای کسانی که سکونت آرام در ارتفاع و فاصله‌ای هوشمندانه از شلوغی خیابان را می‌خواهند.',
     amenities: [
       'سقف ۴ متری',
       'روف‌گاردن اختصاصی',
@@ -185,12 +192,13 @@ export const properties = [
       'جکوزی',
       'پارکینگ مهمان',
     ],
-    coordinates: { lat: 35.77, lng: 50.99 },
+    coordinates: { lat: 35.7238, lng: 50.9752 },
   },
+
   {
-    id: 'farmanieh-residence',
-    slug: 'apartment-farmanieh-residence',
-    title: 'رزیدنس فرمانیه',
+    id: 'dehghan-villa-residence',
+    slug: 'apartment-dehghan-villa-residence',
+    title: 'رزیدنس آرام دهقان‌ویلا',
     location: 'دهقان‌ویلا',
     district: 'کرج',
     price: 45000000,
@@ -212,8 +220,9 @@ export const properties = [
       img('photo-1554995207-c18c203602cb'),
     ],
     description:
-      'واحد اجاره‌ای مبله در مجتمعی آرام با لابی مرتب و دسترسی مناسب به پارک‌ها. مناسب خانواده‌ها و حرفه‌ای‌هایی که سکونت موقت با استاندارد بالا می‌خواهند.',
-    story: 'اجاره‌ای گزینشی با قرارداد شفاف و پشتیبانی مستقیم مشاور.',
+      'واحد اجاره‌ای مبله در مجتمعی آرام در دهقان‌ویلا، با لابی مرتب، پلان کاربردی و دسترسی مناسب به خدمات روزمره. مناسب خانواده‌ها و افرادی که سکونت موقت با استاندارد بالا می‌خواهند.',
+    story:
+      'اجاره‌ای گزینشی با قرارداد شفاف و پشتیبانی مستقیم مشاور در طول فرآیند.',
     amenities: [
       'مبله کامل',
       'سرویس نظافت',
@@ -222,12 +231,13 @@ export const properties = [
       'اینترنت فیبر',
       'نگهبانی',
     ],
-    coordinates: { lat: 35.845, lng: 50.97 },
+    coordinates: { lat: 35.7955, lng: 50.9235 },
   },
+
   {
-    id: 'velenjak-courtyard',
-    slug: 'townhouse-velenjak-courtyard',
-    title: 'تاون‌هاوس حیاط‌دار ولنجک',
+    id: 'mehrshahr-courtyard-townhouse',
+    slug: 'townhouse-mehrshahr-courtyard',
+    title: 'تاون‌هاوس حیاط‌دار مهرشهر',
     location: 'مهرشهر',
     district: 'کرج',
     price: 110000000000,
@@ -248,8 +258,9 @@ export const properties = [
       img('photo-1600607687920-4e2a09cf159d'),
     ],
     description:
-      'تاون‌هاوسی چندطبقه با حیاط جنوبی، نور یکنواخت و پلان خانواده‌محور. ترکیب فضای خصوصی و مشترک به‌گونه‌ای طراحی شده که زندگی روزمره روان بماند.',
-    story: 'انتخابی برای کسانی که استقلال ویلا را در مقیاس شهری می‌خواهند.',
+      'تاون‌هاوسی چندطبقه در مهرشهر با حیاط جنوبی، نور یکنواخت و پلان خانواده‌محور. ارتباط میان فضاهای خصوصی و عمومی به شکلی طراحی شده که زندگی روزمره روان و منعطف باقی بماند.',
+    story:
+      'انتخابی برای کسانی که استقلال یک خانه ویلایی را در مقیاسی شهری و مدیریت‌پذیر می‌خواهند.',
     amenities: [
       'حیاط جنوبی',
       'آشپزخانه دوبل',
@@ -258,12 +269,13 @@ export const properties = [
       'موتورخانه مستقل',
       'دوربین مداربسته',
     ],
-    coordinates: { lat: 35.832, lng: 50.94 },
+    coordinates: { lat: 35.7594, lng: 50.9532 },
   },
+
   {
-    id: 'elahiyeh-studio-view',
-    slug: 'apartment-elahiyeh-gallery',
-    title: 'آپارتمان گالری‌گونه الهیه',
+    id: 'azimiye-gallery-apartment',
+    slug: 'apartment-azimiye-gallery',
+    title: 'آپارتمان گالری‌گونه عظیمیه',
     location: 'عظیمیه',
     district: 'کرج',
     price: 38000000,
@@ -285,8 +297,9 @@ export const properties = [
       img('photo-1615529182904-14819c35db37'),
     ],
     description:
-      'واحدی روشن با دیوارهای خنثی و نور کنترل‌شده؛ مناسب سکونت مینیمال یا استفاده به‌عنوان فضای زندگی/کار ترکیبی.',
-    story: 'اجاره‌ای آرام در یکی از بهترین بلوک‌های عظیمیه.',
+      'واحدی روشن در عظیمیه با دیوارهای خنثی، نور کنترل‌شده و چیدمانی مینیمال. مناسب سکونت شهری یا استفاده به‌عنوان فضای زندگی و کار ترکیبی.',
+    story:
+      'اجاره‌ای آرام برای کسانی که طراحی ساده، نور مناسب و کیفیت فضای داخلی را در اولویت قرار می‌دهند.',
     amenities: [
       'نورگیر دوطرفه',
       'کمد دیواری',
@@ -295,12 +308,13 @@ export const properties = [
       'پارکینگ مسقف',
       'لابی آرام',
     ],
-    coordinates: { lat: 35.836, lng: 51.008 },
+    coordinates: { lat: 35.8342, lng: 51.0121 },
   },
+
   {
-    id: 'zafaraniyeh-classic',
-    slug: 'apartment-zafaraniyeh-classic',
-    title: 'آپارتمان کلاسیک زعفرانیه',
+    id: 'fardis-classic-residence',
+    slug: 'apartment-fardis-classic-residence',
+    title: 'رزیدنس کلاسیک فردیس',
     location: 'فردیس',
     district: 'کرج',
     price: 64000000000,
@@ -317,21 +331,22 @@ export const properties = [
     images: [
       img('photo-1600210491892-03d54c0aaf64'),
       img('photo-1600489000022-c2086d79f9d4'),
-      img('photo-1600495034863-3a7ba1c4b5c6'),
       img('photo-1600585154084-4e5fe7c39198'),
+      img('photo-1600566753190-17f0baa2a6c3'),
     ],
     description:
-      'واحدی با سقف بلند، گچ‌بری ظریف و بازسازی انتخابی که اصالت فضا را حفظ کرده است. مناسب علاقه‌مندان به سکونت کلاسیکِ به‌روزشده.',
-    story: 'تعادل میان شخصیت معماری قدیمی و امکانات زندگی امروز.',
+      'واحدی با سقف بلند، جزئیات معماری کلاسیک و بازسازی انتخابی که شخصیت فضا را حفظ کرده است. ترکیب متریال گرم و امکانات امروزی، خانه‌ای متعادل برای سکونت خانوادگی ساخته است.',
+    story:
+      'تعادلی میان شخصیت معماری کلاسیک و استانداردهای زندگی امروز در یکی از بخش‌های آرام فردیس.',
     amenities: [
       'سقف بلند',
       'شومینه',
-      'اتاق خدمتکار',
+      'اتاق کار',
       'انباری بزرگ',
       'تراس غربی',
       'نگهبانی',
     ],
-    coordinates: { lat: 35.772, lng: 50.995 },
+    coordinates: { lat: 35.7218, lng: 50.9795 },
   },
 ]
 
@@ -354,16 +369,29 @@ export function formatCount(n) {
 export function filterProperties(list, filters) {
   return list.filter((p) => {
     if (filters.q) {
-      const q = filters.q.trim()
-      const hay = `${p.title} ${p.location} ${p.typeLabel} ${p.description}`
+      const q = filters.q.trim().toLowerCase()
+
+      const hay = `${p.title} ${p.location} ${p.typeLabel} ${p.description} ${p.story}`.toLowerCase()
+
       if (!hay.includes(q)) return false
     }
-    if (filters.location && filters.location !== 'all' && p.location !== filters.location) {
+
+    if (
+      filters.location &&
+      filters.location !== 'all' &&
+      p.location !== filters.location
+    ) {
       return false
     }
-    if (filters.type && filters.type !== 'all' && p.type !== filters.type) {
+
+    if (
+      filters.type &&
+      filters.type !== 'all' &&
+      p.type !== filters.type
+    ) {
       return false
     }
+
     if (
       filters.transaction &&
       filters.transaction !== 'all' &&
@@ -371,9 +399,11 @@ export function filterProperties(list, filters) {
     ) {
       return false
     }
+
     if (filters.bedrooms && filters.bedrooms !== 'all') {
       if (p.bedrooms < Number(filters.bedrooms)) return false
     }
+
     return true
   })
 }
