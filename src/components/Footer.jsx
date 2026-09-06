@@ -70,15 +70,10 @@ export default function Footer() {
       </div>
 
       <div className="container--wide site-footer__bottom">
-<<<<<<< HEAD
-        <p>© {new Date().getFullYear()} {agency.name}. تمامی حقوق محفوظ است.</p>
-        <p className="meta">نمایشگاه دیجیتال املاک درخشان</p>
-=======
         <p>
           © {new Date().getFullYear()} {agency.name}. تمامی حقوق محفوظ است.
         </p>
         <p className="meta">نمایشگاه دیجیتال املاک ممتاز</p>
->>>>>>> 20511ff (Redesign mobile-first UX for Derakhshan discovery experience.)
       </div>
     </footer>
   )
