@@ -48,11 +48,10 @@ export const agency = {
     },
   ],
   locations: [
-    { name: 'الهیه', count: 12 },
-    { name: 'فرشته', count: 9 },
-    { name: 'زعفرانیه', count: 11 },
-    { name: 'نیاوران', count: 8 },
-    { name: 'فرمانیه', count: 7 },
-    { name: 'ولنجک', count: 6 },
+    { name: 'مهرشهر', count: 12 },
+    { name: 'عظیمیه', count: 9 },
+    { name: 'مصباح', count: 11 },
+    { name: 'فردیس', count: 8 },
+    { name: 'دهقان‌ویلا', count: 7 },
   ],
 }
