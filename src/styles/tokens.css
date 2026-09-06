@@ -1,0 +1,91 @@
+:root {
+  /* Surfaces */
+  --color-bg: #f6f3ee;
+  --color-bg-elevated: #ffffff;
+  --color-bg-muted: #ebe6de;
+  --color-bg-inverse: #161411;
+  --color-bg-inverse-soft: #221f1a;
+
+  /* Ink */
+  --color-ink: #161411;
+  --color-ink-soft: #3d3a34;
+  --color-muted: #6f6a61;
+  --color-faint: #9a9489;
+  --color-on-inverse: #f6f3ee;
+  --color-on-inverse-muted: rgba(246, 243, 238, 0.72);
+
+  /* Accent — warm bronze, supports photography */
+  --color-accent: #9a7344;
+  --color-accent-hover: #7f5d35;
+  --color-accent-soft: rgba(154, 115, 68, 0.12);
+  --color-accent-line: rgba(154, 115, 68, 0.35);
+
+  /* Lines */
+  --color-border: #e2dcd2;
+  --color-border-strong: #cfc6b8;
+  --color-focus: #9a7344;
+
+  /* Typography */
+  --font-sans: 'Vazirmatn', 'Tahoma', system-ui, sans-serif;
+  --font-display: 'Vazirmatn', 'Tahoma', system-ui, sans-serif;
+
+  --text-xs: clamp(0.7rem, 0.68rem + 0.1vw, 0.75rem);
+  --text-sm: clamp(0.8125rem, 0.78rem + 0.15vw, 0.875rem);
+  --text-base: clamp(0.9375rem, 0.9rem + 0.2vw, 1.0625rem);
+  --text-md: clamp(1.0625rem, 1rem + 0.3vw, 1.1875rem);
+  --text-lg: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+  --text-xl: clamp(1.5rem, 1.25rem + 1vw, 2rem);
+  --text-2xl: clamp(1.875rem, 1.4rem + 1.8vw, 2.75rem);
+  --text-3xl: clamp(2.25rem, 1.6rem + 2.6vw, 3.75rem);
+  --text-hero: clamp(2.5rem, 1.7rem + 3.4vw, 4.5rem);
+
+  --leading-tight: 1.2;
+  --leading-snug: 1.35;
+  --leading-normal: 1.7;
+  --leading-relaxed: 1.85;
+
+  --tracking-label: 0.08em;
+  --tracking-display: -0.01em;
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+
+  --section-y: clamp(4.5rem, 6vw, 8rem);
+  --section-y-sm: clamp(3rem, 4vw, 5rem);
+  --container: 72rem;
+  --container-wide: 84rem;
+  --container-narrow: 42rem;
+  --gutter: clamp(1.25rem, 3vw, 2.5rem);
+
+  /* Shape — editorial, restrained */
+  --radius-xs: 2px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+
+  /* Elevation — almost none */
+  --shadow-soft: 0 12px 40px rgba(22, 20, 17, 0.06);
+  --shadow-lift: 0 18px 50px rgba(22, 20, 17, 0.1);
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-fast: 180ms;
+  --duration: 320ms;
+  --duration-slow: 700ms;
+
+  /* Header */
+  --header-h: 4.5rem;
+  --z-header: 100;
+  --z-overlay: 200;
+  --z-modal: 300;
+}

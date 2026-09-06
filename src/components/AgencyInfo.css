@@ -1,0 +1,58 @@
+.agency-info {
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-5);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.agency-info h3 {
+  font-size: var(--text-xl);
+  font-weight: 500;
+  color: var(--color-ink);
+}
+
+.agency-info > p {
+  color: var(--color-muted);
+}
+
+.agency-info__contacts {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: var(--space-2);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.agency-info__contacts li {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.agency-info__contacts span {
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-faint);
+}
+
+.agency-info__contacts a {
+  color: var(--color-ink);
+  font-weight: 500;
+}
+
+.agency-info__contacts a:hover {
+  color: var(--color-accent);
+}
+
+.agency-info__actions {
+  display: grid;
+  gap: var(--space-3);
+  margin-top: var(--space-3);
+}
+
+.agency-info--compact {
+  position: sticky;
+  top: calc(var(--header-h) + 1.25rem);
+}

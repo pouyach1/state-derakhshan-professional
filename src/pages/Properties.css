@@ -1,0 +1,12 @@
+.properties-page__hero {
+  padding-top: clamp(3rem, 6vw, 5rem);
+  padding-bottom: 0;
+}
+
+.properties-page__hero .section-heading {
+  margin-bottom: 0;
+}
+
+.properties-page__list {
+  padding-top: var(--space-6);
+}
