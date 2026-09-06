@@ -35,14 +35,17 @@ export default function Home() {
         </div>
 
         <div className="container--wide home-hero__content">
-          <p className="eyebrow">کرج · املاک منتخب</p>
+          <p className="eyebrow">املاک درخشان · کرج</p>
           <h1 className="display">
             خانه‌هایی که
             <span> با دقت دیده شده‌اند</span>
           </h1>
-          <p className="home-hero__lead">
+          <p className="home-hero__lead home-hero__lead--full">
             املاک درخشان یک نمایشگاه دیجیتال برای املاک ممتاز کرج است؛ انتخابی
             محدود، ارائه دقیق، و مسیری روشن تا گفتگوی مستقیم با مشاور.
+          </p>
+          <p className="home-hero__lead home-hero__lead--mobile">
+            انتخابی محدود از املاک ممتاز کرج؛ معرفی دقیق تا گفتگو با مشاور.
           </p>
           <div className="home-hero__actions">
             <Button to="/properties" size="lg">
@@ -52,7 +55,7 @@ export default function Home() {
               تماس با درخشان
             </Button>
           </div>
-          <div className="home-hero__trust meta">
+          <div className="home-hero__trust meta" aria-label="محله‌های تخصصی">
             <span>مهرشهر</span>
             <span aria-hidden="true">·</span>
             <span>عظیمیه</span>

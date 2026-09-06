@@ -64,15 +64,13 @@ export default function PropertyDetail() {
       <section className="property-detail__intro section--sm">
         <div className="container--wide">
           <nav className="property-detail__crumb meta" aria-label="مسیر صفحه">
-            <Link to="/">خانه</Link>
-            <span>/</span>
             <Link to="/properties">املاک</Link>
             <span>/</span>
             <Link to={`/properties?location=${encodeURIComponent(property.location)}`}>
               {property.location}
             </Link>
-            <span>/</span>
-            <span>{property.title}</span>
+            <span className="property-detail__crumb-title">/</span>
+            <span className="property-detail__crumb-title">{property.title}</span>
           </nav>
         </div>
       </section>
@@ -235,9 +233,9 @@ export default function PropertyDetail() {
         </div>
         <div className="property-detail__sticky-actions">
           <Button href={visitHref} target="_blank" rel="noreferrer" size="sm">
-            بازدید
+            واتساپ
           </Button>
-          <Button href={agency.phoneHref} variant="secondary" size="sm">
+          <Button href={agency.mobileHref || agency.phoneHref} variant="secondary" size="sm">
             تماس
           </Button>
         </div>

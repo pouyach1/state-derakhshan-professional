@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import { agency } from '../data/agency'
 import Button from './Button'
 import './Header.css'
@@ -14,9 +14,11 @@ const links = [
 export default function Header() {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const { pathname } = useLocation()
+  const overHero = pathname === '/' && !scrolled && !open
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24)
+    const onScroll = () => setScrolled(window.scrollY > 16)
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
@@ -37,12 +39,24 @@ export default function Header() {
     return () => window.removeEventListener('keydown', onKey)
   }, [])
 
+  const [lastPath, setLastPath] = useState(pathname)
+  if (pathname !== lastPath) {
+    setLastPath(pathname)
+    if (open) setOpen(false)
+  }
+
   const close = () => setOpen(false)
 
   return (
-    <header className={['site-header', scrolled ? 'is-scrolled' : '', open ? 'is-open' : '']
-      .filter(Boolean)
-      .join(' ')}
+    <header
+      className={[
+        'site-header',
+        scrolled ? 'is-scrolled' : '',
+        open ? 'is-open' : '',
+        overHero ? 'is-over-hero' : '',
+      ]
+        .filter(Boolean)
+        .join(' ')}
     >
       <div className="site-header__inner container--wide">
         <Link to="/" className="brand" onClick={close} aria-label={agency.name}>
@@ -72,6 +86,13 @@ export default function Header() {
           <a className="site-header__phone meta" href={agency.phoneHref}>
             {agency.phone}
           </a>
+          <a
+            className="site-header__call"
+            href={agency.mobileHref || agency.phoneHref}
+            aria-label="تماس تلفنی"
+          >
+            تماس
+          </a>
           <Button to="/contact" size="sm" className="site-header__cta">
             مشاوره
           </Button>
@@ -94,7 +115,14 @@ export default function Header() {
         className={['mobile-nav', open ? 'is-open' : ''].filter(Boolean).join(' ')}
         hidden={!open}
       >
+        <button
+          type="button"
+          className="mobile-nav__backdrop"
+          aria-label="بستن منو"
+          onClick={close}
+        />
         <nav className="mobile-nav__panel" aria-label="منوی موبایل">
+          <p className="mobile-nav__kicker meta">املاک درخشان · کرج</p>
           {links.map((link) => (
             <NavLink
               key={link.to}
@@ -113,12 +141,14 @@ export default function Header() {
             <Button to="/properties" onClick={close}>
               مشاهده املاک
             </Button>
-            <Button href={agency.whatsapp} target="_blank" rel="noreferrer" variant="secondary">
-              پیام واتساپ
-            </Button>
-            <Button href={agency.phoneHref} variant="inverse">
-              تماس تلفنی
-            </Button>
+            <div className="mobile-nav__cta-row">
+              <Button href={agency.whatsapp} target="_blank" rel="noreferrer" variant="secondary">
+                واتساپ
+              </Button>
+              <Button href={agency.phoneHref} variant="inverse">
+                تماس
+              </Button>
+            </div>
           </div>
         </nav>
       </div>

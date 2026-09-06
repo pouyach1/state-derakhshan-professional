@@ -73,11 +73,31 @@ export default function PropertyGallery({ images, title }) {
     return () => window.removeEventListener('keydown', onKey)
   }, [lightboxOpen, go])
 
+  const touchStartX = useRef(null)
+
+  const onTouchStart = (e) => {
+    touchStartX.current = e.changedTouches[0]?.clientX ?? null
+  }
+
+  const onTouchEnd = (e) => {
+    if (touchStartX.current == null || images.length < 2) return
+    const delta = e.changedTouches[0].clientX - touchStartX.current
+    touchStartX.current = null
+    if (Math.abs(delta) < 40) return
+    // RTL: swipe toward start (positive delta in LTR coords from right finger move) shows previous visually; keep simple.
+    if (delta > 0) go(1)
+    else go(-1)
+  }
+
   if (!images?.length) return null
 
   return (
     <div className="property-gallery">
-      <div className="property-gallery__stage">
+      <div
+        className="property-gallery__stage"
+        onTouchStart={onTouchStart}
+        onTouchEnd={onTouchEnd}
+      >
         <button
           type="button"
           className="property-gallery__hero"
@@ -167,6 +187,8 @@ export default function PropertyGallery({ images, title }) {
           onClick={(e) => {
             if (e.target === e.currentTarget) closeLightbox()
           }}
+          onTouchStart={onTouchStart}
+          onTouchEnd={onTouchEnd}
         >
           <div className="property-gallery__lightbox-bar">
             <p id={labelId} className="meta">
