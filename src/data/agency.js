@@ -2,44 +2,55 @@ export const agency = {
   name: 'املاک درخشان',
   nameEn: 'Derakhshan Real Estate',
   tagline: 'خانه‌هایی که با دقت انتخاب شده‌اند',
+
   phone: '۰۲۱-۲۲۶۶۷۸۹۰',
   phoneHref: 'tel:+982122667890',
-  mobile: '۰۹۱۲-۳۴۵-۶۷۸۹',
-  mobileHref: 'tel:+989123456789',
-  whatsapp: 'https://wa.me/989123456789',
+
+  mobile: '0912423851',
+  mobileHref: 'tel:+989122324851',
+
+  whatsapp: 'https://wa.me/989122324851',
   telegram: 'https://t.me/derakhshanestate',
+
   email: 'info@derakhshan.estate',
   emailHref: 'mailto:info@derakhshan.estate',
-  address: 'تهران، الهیه، خیابان فرشته، پلاک ۱۲، طبقه ۳',
+
+  address: 'کرج - مشکین دشت - خیابان هدایتکار - جنب فروشگاه افق کوروش',
+
   mapEmbed:
     'https://www.openstreetmap.org/export/embed.html?bbox=51.415%2C35.795%2C51.435%2C35.810&layer=mapnik&marker=35.8025%2C51.425',
-  mapLink: 'https://maps.google.com/?q=Elahiyeh+Tehran',
+
+  mapLink: 'https://maps.app.goo.gl/sjLmEwnzbJQmR5qQ6',
+
   hours: 'شنبه تا پنجشنبه · ۹ تا ۱۸',
+
   social: {
     instagram: 'https://instagram.com/',
     linkedin: 'https://linkedin.com/',
   },
+
   stats: [
     { value: '۱۸+', label: 'سال تجربه' },
     { value: '۴۲۰+', label: 'ملک واگذار‌شده' },
     { value: '۹۸٪', label: 'رضایت موکلان' },
-    { value: '۶', label: 'منطقه تخصصی' },
+    { value: '۵', label: 'منطقه تخصصی' },
   ],
+
   services: [
     {
       title: 'فروش املاک خاص',
       description:
-        'انتخاب، آماده‌سازی و معرفی ملک‌های ممتاز در موقعیت‌های کلیدی شمال تهران.',
+        'انتخاب، آماده‌سازی و معرفی ملک‌های ممتاز در محله‌های کلیدی کرج؛ از مهرشهر و عظیمیه تا مصباح، فردیس و دهقان‌ویلا.',
     },
     {
       title: 'اجاره گزینشی',
       description:
-        'انطباق دقیق بین ملک و سبک زندگی مستأجر، با تمرکز بر کیفیت سکونت.',
+        'انطباق دقیق بین ملک و سبک زندگی مستأجر، با تمرکز بر کیفیت سکونت در کرج.',
     },
     {
       title: 'مشاوره سرمایه‌گذاری',
       description:
-        'تحلیل موقعیت، ارزش‌افزایی و چشم‌انداز بازار برای تصمیم‌های بلندمدت.',
+        'تحلیل موقعیت، ارزش‌افزایی و چشم‌انداز بازار مسکن کرج برای تصمیم‌های بلندمدت.',
     },
     {
       title: 'ارائه حرفه‌ای ملک',
@@ -47,11 +58,12 @@ export const agency = {
         'عکاسی معماری، روایت فضا و معرفی دقیق برای نمایش شایسته هر خانه.',
     },
   ],
+
   locations: [
-    { name: 'مهرشهر', count: 12 },
-    { name: 'عظیمیه', count: 9 },
-    { name: 'مصباح', count: 11 },
-    { name: 'فردیس', count: 8 },
-    { name: 'دهقان‌ویلا', count: 7 },
+    { name: 'مهرشهر', count: 2 },
+    { name: 'عظیمیه', count: 2 },
+    { name: 'مصباح', count: 2 },
+    { name: 'فردیس', count: 1 },
+    { name: 'دهقان‌ویلا', count: 1 },
   ],
-}
+};
