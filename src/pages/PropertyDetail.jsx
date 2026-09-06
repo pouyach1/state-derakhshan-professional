@@ -54,40 +54,26 @@ export default function PropertyDetail() {
     },
   ]
 
+  const visitMessage = encodeURIComponent(
+    `سلام، درباره ملک «${property.title}» در ${property.location} راهنمایی می‌خواهم.`,
+  )
+  const visitHref = `${agency.whatsapp}?text=${visitMessage}`
+
   return (
     <div className="property-detail">
-      <section className="property-detail__top section--sm">
+      <section className="property-detail__intro section--sm">
         <div className="container--wide">
           <nav className="property-detail__crumb meta" aria-label="مسیر صفحه">
             <Link to="/">خانه</Link>
             <span>/</span>
             <Link to="/properties">املاک</Link>
             <span>/</span>
+            <Link to={`/properties?location=${encodeURIComponent(property.location)}`}>
+              {property.location}
+            </Link>
+            <span>/</span>
             <span>{property.title}</span>
           </nav>
-
-          <div className="property-detail__heading">
-            <div>
-              <p className="eyebrow">
-                {property.location} · {property.typeLabel}
-              </p>
-              <h1 className="display">{property.title}</h1>
-              <p className="property-detail__price price">
-                {property.priceLabel}
-                {property.priceSuffix ? (
-                  <span> / {property.priceSuffix}</span>
-                ) : null}
-              </p>
-            </div>
-            <div className="property-detail__heading-actions">
-              <Button href={agency.whatsapp} target="_blank" rel="noreferrer">
-                درخواست بازدید
-              </Button>
-              <Button href={agency.phoneHref} variant="secondary">
-                تماس تلفنی
-              </Button>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -100,6 +86,32 @@ export default function PropertyDetail() {
               title={property.title}
             />
           </Reveal>
+        </div>
+      </section>
+
+      <section className="section--sm property-detail__identity">
+        <div className="container--wide property-detail__heading">
+          <div>
+            <p className="eyebrow">
+              {property.location} · {property.typeLabel} ·{' '}
+              {property.transaction === 'rent' ? 'اجاره' : 'فروش'}
+            </p>
+            <h1 className="display">{property.title}</h1>
+            <p className="property-detail__price price">
+              {property.priceLabel}
+              {property.priceSuffix ? (
+                <span> / {property.priceSuffix}</span>
+              ) : null}
+            </p>
+          </div>
+          <div className="property-detail__heading-actions">
+            <Button href={visitHref} target="_blank" rel="noreferrer">
+              هماهنگی بازدید
+            </Button>
+            <Button href={agency.phoneHref} variant="secondary">
+              تماس با مشاور
+            </Button>
+          </div>
         </div>
       </section>
 
@@ -158,10 +170,33 @@ export default function PropertyDetail() {
                 </div>
               </div>
             </Reveal>
+
+            <Reveal>
+              <div className="property-detail__ask">
+                <h2 className="headline">دریافت اطلاعات این ملک</h2>
+                <p>
+                  برای جزئیات بیشتر، هماهنگی بازدید حضوری، یا گفتگو با مشاور املاک درخشان
+                  از مسیرهای زیر استفاده کنید.
+                </p>
+                <div className="property-detail__ask-actions">
+                  <Button href={visitHref} target="_blank" rel="noreferrer">
+                    پیام واتساپ
+                  </Button>
+                  <Button href={agency.mobileHref || agency.phoneHref} variant="secondary">
+                    تماس مستقیم
+                  </Button>
+                  <Button to="/contact" variant="text">
+                    صفحه تماس
+                  </Button>
+                </div>
+              </div>
+            </Reveal>
           </div>
 
           <Reveal delay={80}>
-            <AgencyInfo compact />
+            <aside className="property-detail__aside">
+              <AgencyInfo compact />
+            </aside>
           </Reveal>
         </div>
       </section>
@@ -184,9 +219,29 @@ export default function PropertyDetail() {
       <CTASection
         title="این ملک را از نزدیک ببینید"
         description="برای هماهنگی بازدید یا دریافت جزئیات بیشتر، با تیم املاک درخشان در ارتباط باشید."
-        primary={{ href: agency.whatsapp, label: 'پیام واتساپ' }}
+        primary={{ href: visitHref, label: 'هماهنگی بازدید' }}
         secondary={{ to: '/contact', label: 'صفحه تماس' }}
       />
+
+      <div className="property-detail__sticky" role="region" aria-label="اقدام سریع تماس">
+        <div className="property-detail__sticky-price">
+          <span className="meta">{property.location}</span>
+          <strong className="price">
+            {property.priceLabel}
+            {property.priceSuffix ? (
+              <span> / {property.priceSuffix}</span>
+            ) : null}
+          </strong>
+        </div>
+        <div className="property-detail__sticky-actions">
+          <Button href={visitHref} target="_blank" rel="noreferrer" size="sm">
+            بازدید
+          </Button>
+          <Button href={agency.phoneHref} variant="secondary" size="sm">
+            تماس
+          </Button>
+        </div>
+      </div>
     </div>
   )
 }

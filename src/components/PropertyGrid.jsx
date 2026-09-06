@@ -1,3 +1,4 @@
+import Button from './Button'
 import PropertyCard from './PropertyCard'
 import './PropertyGrid.css'
 
@@ -7,6 +8,9 @@ export default function PropertyGrid({ properties, columns = 3, variant = 'defau
       <div className="property-grid__empty">
         <p>ملکی با این مشخصات یافت نشد.</p>
         <p className="meta">فیلترها را تغییر دهید یا همه املاک را مشاهده کنید.</p>
+        <Button to="/properties" variant="secondary">
+          نمایش همه املاک
+        </Button>
       </div>
     )
   }

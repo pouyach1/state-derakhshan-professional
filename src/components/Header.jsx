@@ -110,6 +110,12 @@ export default function Header() {
           ))}
           <div className="mobile-nav__footer">
             <p className="meta">{agency.address}</p>
+            <Button to="/properties" onClick={close}>
+              مشاهده املاک
+            </Button>
+            <Button href={agency.whatsapp} target="_blank" rel="noreferrer" variant="secondary">
+              پیام واتساپ
+            </Button>
             <Button href={agency.phoneHref} variant="inverse">
               تماس تلفنی
             </Button>

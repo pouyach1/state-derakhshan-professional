@@ -1,7 +1,12 @@
 .property-card {
+  height: 100%;
+}
+
+.property-card__link {
   display: grid;
   gap: var(--space-4);
   height: 100%;
+  color: inherit;
 }
 
 .property-card__media {
@@ -24,8 +29,9 @@
   transition: transform var(--duration-slow) var(--ease-out);
 }
 
-.property-card:hover .property-card__media img {
-  transform: scale(1.035);
+.property-card__link:hover .property-card__media img,
+.property-card__link:focus-visible .property-card__media img {
+  transform: scale(1.03);
 }
 
 .property-card__badges {
@@ -34,11 +40,11 @@
   inset-inline-start: 0.85rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  gap: 0.35rem;
 }
 
 .property-card__badges span {
-  padding: 0.35rem 0.6rem;
+  padding: 0.3rem 0.55rem;
   background: rgba(246, 243, 238, 0.92);
   color: var(--color-ink);
   font-size: var(--text-xs);
@@ -48,14 +54,14 @@
 
 .property-card__body {
   display: grid;
-  gap: 0.55rem;
+  gap: 0.5rem;
   align-content: start;
 }
 
 .property-card__meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem;
+  gap: 0.25rem;
 }
 
 .property-card h3 {
@@ -63,16 +69,19 @@
   font-weight: 500;
   line-height: var(--leading-snug);
   color: var(--color-ink);
+  transition: color var(--duration-fast) var(--ease-out);
 }
 
-.property-card h3 a:hover {
+.property-card__link:hover h3,
+.property-card__link:focus-visible h3 {
   color: var(--color-accent);
 }
 
 .property-card__price {
-  font-size: var(--text-base);
+  font-size: var(--text-md);
   font-weight: 600;
   color: var(--color-ink);
+  letter-spacing: 0.01em;
 }
 
 .property-card__suffix {
@@ -85,7 +94,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.55rem 0.9rem;
-  margin-top: 0.2rem;
+  margin-top: 0.15rem;
 }
 
 .property-card__specs li {
@@ -110,16 +119,19 @@
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  margin-top: 0.45rem;
+  margin-top: 0.35rem;
   font-size: var(--text-sm);
   font-weight: 500;
   color: var(--color-ink);
   width: fit-content;
   box-shadow: inset 0 -1px 0 var(--color-accent-line);
-  transition: color var(--duration-fast) var(--ease-out), box-shadow var(--duration-fast) var(--ease-out);
+  transition:
+    color var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out);
 }
 
-.property-card__cta:hover {
+.property-card__link:hover .property-card__cta,
+.property-card__link:focus-visible .property-card__cta {
   color: var(--color-accent);
   box-shadow: inset 0 -1px 0 var(--color-accent);
 }
@@ -129,7 +141,8 @@
     transition: none;
   }
 
-  .property-card:hover .property-card__media img {
+  .property-card__link:hover .property-card__media img,
+  .property-card__link:focus-visible .property-card__media img {
     transform: none;
   }
 }

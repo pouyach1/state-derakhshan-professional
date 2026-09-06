@@ -17,13 +17,18 @@
 
 .property-grid__empty {
   display: grid;
-  gap: 0.5rem;
+  gap: 0.75rem;
+  justify-items: center;
   padding: var(--space-8) var(--space-5);
   text-align: center;
   background: var(--color-bg-elevated);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   color: var(--color-ink);
+}
+
+.property-grid__empty .btn {
+  margin-top: var(--space-3);
 }
 
 @media (max-width: 980px) {
