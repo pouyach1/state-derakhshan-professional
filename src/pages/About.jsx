@@ -12,7 +12,7 @@ export default function About() {
   useDocumentMeta({
     title: 'درباره ما | املاک درخشان',
     description:
-      'آشنایی با فلسفه، تجربه و رویکرد املاک درخشان در معرفی خانه‌های ممتاز کرج.',
+      'آشنایی با فلسفه، تجربه و رویکرد املاک درخشان در معرفی خانه‌های ممتاز شمال تهران.',
   })
 
   const images = getFeaturedProperties(3)
@@ -75,7 +75,7 @@ export default function About() {
               <SectionHeading
                 eyebrow="تجربه"
                 title="شناخت محلی، نگاه حرفه‌ای"
-                description="سال‌ها فعالیت متمرکز در کرج به ما آموخته که ارزش واقعی یک خانه، در جزئیات محله و کیفیت اجرای آن پنهان است."
+                description="سال‌ها فعالیت متمرکز در شمال تهران به ما آموخته که ارزش واقعی یک خانه، در جزئیات محله و کیفیت اجرای آن پنهان است."
               />
               <ul className="about-stats">
                 {agency.stats.map((stat) => (

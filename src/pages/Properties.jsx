@@ -30,7 +30,7 @@ export default function Properties() {
   useDocumentMeta({
     title: 'املاک | املاک درخشان',
     description:
-      'فهرست گزینشی آپارتمان، پنت‌هاوس و ویلا در محله‌های ممتاز کرج؛ مهرشهر، عظیمیه، مصباح، فردیس و دهقان‌ویلا.',
+      'فهرست گزینشی آپارتمان، پنت‌هاوس و ویلا در محله‌های ممتاز شمال تهران.',
   })
 
   const [searchParams, setSearchParams] = useSearchParams()
