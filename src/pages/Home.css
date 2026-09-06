@@ -243,25 +243,111 @@
   }
 }
 
-@media (max-width: 620px) {
+.home-hero__lead--mobile {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .home-hero {
+    min-height: 100svh;
+    min-height: 100dvh;
+    align-items: end;
+  }
+
+  .home-hero__media img {
+    transform: none;
+  }
+
+  .home-hero__veil {
+    background:
+      linear-gradient(180deg, rgba(22, 20, 17, 0.2) 0%, rgba(22, 20, 17, 0.42) 42%, rgba(22, 20, 17, 0.92) 100%),
+      linear-gradient(90deg, rgba(22, 20, 17, 0.35) 0%, rgba(22, 20, 17, 0.08) 70%, rgba(22, 20, 17, 0.25) 100%);
+  }
+
   .home-hero__content {
     width: min(100% - (var(--gutter) * 2), var(--container-wide));
     margin-inline: auto;
-  }
-
-  .home-hero .display {
+    padding-block: calc(var(--header-h) + 1.5rem) 1.5rem;
+    gap: var(--space-4);
     max-width: none;
   }
 
-  .home-agency__stats {
+  .home-hero .display {
+    max-width: 11ch;
+    font-size: var(--text-hero);
+  }
+
+  .home-hero__lead--full {
+    display: none;
+  }
+
+  .home-hero__lead--mobile {
+    display: block;
+    max-width: 28rem;
+    font-size: var(--text-base);
+    line-height: var(--leading-relaxed);
+  }
+
+  .home-hero__actions {
+    display: grid;
     grid-template-columns: 1fr;
+    gap: 0.75rem;
   }
 
   .home-hero__actions .btn {
     width: 100%;
   }
 
+  .home-hero__ghost {
+    order: 2;
+  }
+
+  .home-hero__trust {
+    gap: 0.35rem 0.5rem;
+    padding-top: var(--space-3);
+    font-size: var(--text-xs);
+  }
+
+  .home-featured,
+  .home-discover,
+  .home-agency,
+  .home-services,
+  .home-strip {
+    padding-block: var(--section-y);
+  }
+
+  .home-agency__stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-3);
+  }
+
+  .home-agency__stats strong {
+    font-size: var(--text-lg);
+  }
+
+  .home-locations a {
+    padding-block: 1rem;
+  }
+
+  .home-locations a:hover {
+    padding-inline-start: 0;
+  }
+
+  .service-card {
+    padding: var(--space-4);
+  }
+}
+
+@media (max-width: 620px) {
+  .home-agency__stats {
+    grid-template-columns: 1fr;
+  }
+
   .home-services__grid {
     grid-template-columns: 1fr;
+  }
+
+  .home-hero .display {
+    max-width: none;
   }
 }

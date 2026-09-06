@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { agency } from '../data/agency'
+import Button from './Button'
 import './Footer.css'
 
 export default function Footer() {
@@ -10,6 +11,14 @@ export default function Footer() {
           <p className="eyebrow">Derakhshan</p>
           <h2 className="headline">{agency.name}</h2>
           <p className="subhead">{agency.tagline}</p>
+          <div className="site-footer__mobile-cta">
+            <Button href={agency.whatsapp} target="_blank" rel="noreferrer">
+              واتساپ
+            </Button>
+            <Button href={agency.phoneHref} variant="secondary">
+              تماس
+            </Button>
+          </div>
         </div>
 
         <div className="site-footer__cols">
@@ -61,8 +70,10 @@ export default function Footer() {
       </div>
 
       <div className="container--wide site-footer__bottom">
-        <p>© {new Date().getFullYear()} {agency.name}. تمامی حقوق محفوظ است.</p>
-        <p className="meta">نمایشگاه دیجیتال املاک درخشان</p>
+        <p>
+          © {new Date().getFullYear()} {agency.name}. تمامی حقوق محفوظ است.
+        </p>
+        <p className="meta">نمایشگاه دیجیتال املاک ممتاز</p>
       </div>
     </footer>
   )

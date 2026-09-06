@@ -38,10 +38,11 @@
   }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 720px) {
   .property-grid--2,
   .property-grid--3,
   .property-grid--4 {
     grid-template-columns: 1fr;
+    gap: 1.75rem;
   }
 }
