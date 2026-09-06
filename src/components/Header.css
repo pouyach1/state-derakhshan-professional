@@ -8,28 +8,26 @@
   transition:
     background-color var(--duration) var(--ease-out),
     border-color var(--duration) var(--ease-out),
-    color var(--duration) var(--ease-out),
-    backdrop-filter var(--duration) var(--ease-out);
+    color var(--duration) var(--ease-out);
   border-bottom: 1px solid transparent;
 }
 
 .site-header.is-scrolled,
 .site-header.is-open {
-  background: rgba(246, 243, 238, 0.94);
+  background: var(--color-bg);
   border-bottom-color: var(--color-border);
-  backdrop-filter: blur(16px);
 }
 
 .site-header.is-over-hero {
   color: var(--color-on-inverse);
 }
 
-.site-header.is-over-hero .brand__text strong,
+.site-header.is-over-hero .brand__fa,
 .site-header.is-over-hero .site-header__call {
   color: var(--color-on-inverse);
 }
 
-.site-header.is-over-hero .brand__text small {
+.site-header.is-over-hero .brand__en {
   color: var(--color-on-inverse-muted);
 }
 
@@ -73,15 +71,15 @@
   min-width: 0;
 }
 
-.brand__text strong {
+.brand__fa {
   font-size: var(--text-base);
   font-weight: 600;
   color: var(--color-ink);
 }
 
-.brand__text small {
+.brand__en {
   font-size: 0.65rem;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-muted);
   white-space: nowrap;
@@ -109,7 +107,7 @@
   inset-inline: 0;
   bottom: 0;
   height: 1px;
-  background: var(--color-accent);
+  background: currentColor;
   transform: scaleX(0);
   transform-origin: right;
   transition: transform var(--duration) var(--ease-out);
@@ -133,8 +131,33 @@
 
 .site-header__phone {
   display: none;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.15rem;
+  line-height: 1.1;
+  text-decoration: none;
+}
+
+.site-header__phone-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-faint);
+}
+
+.site-header__phone-number {
   direction: ltr;
   unicode-bidi: plaintext;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+  color: var(--color-ink);
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.site-header__phone:hover .site-header__phone-number {
+  color: var(--color-accent);
 }
 
 .site-header__call {
@@ -154,6 +177,28 @@
 .site-header.is-over-hero .site-header__call {
   border-color: rgba(246, 243, 238, 0.35);
   background: rgba(22, 20, 17, 0.28);
+}
+
+.site-header__cta {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.5rem;
+  padding-inline: 1.1rem;
+  border: 1px solid var(--color-ink);
+  color: var(--color-ink);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition:
+    background-color var(--duration-fast) var(--ease-out),
+    color var(--duration-fast) var(--ease-out),
+    border-color var(--duration-fast) var(--ease-out);
+}
+
+.site-header__cta:hover {
+  background: var(--color-ink);
+  color: var(--color-on-inverse);
 }
 
 .menu-toggle {
@@ -260,23 +305,87 @@
   gap: var(--space-3);
 }
 
-.site-header__cta {
-  display: none;
-}
-
 @media (min-width: 640px) {
   .site-header__cta {
     display: inline-flex;
   }
 }
 
+/* —— Desktop art direction —— */
 @media (min-width: 900px) {
+  :root {
+    --header-h: 5.25rem;
+  }
+
+  .site-header.is-scrolled {
+    background: rgba(246, 243, 238, 0.97);
+  }
+
+  .site-header__inner {
+    gap: clamp(1.75rem, 3vw, 3.25rem);
+  }
+
+  .brand {
+    gap: 0;
+  }
+
+  .brand__mark {
+    display: none;
+  }
+
+  .brand__text {
+    gap: 0.28rem;
+  }
+
+  .brand__fa {
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    line-height: 1;
+  }
+
+  .brand__en {
+    font-size: 0.625rem;
+    letter-spacing: 0.22em;
+    font-weight: 400;
+  }
+
   .site-nav {
     display: flex;
+    gap: clamp(1.85rem, 2.6vw, 3rem);
+  }
+
+  .site-nav__link {
+    font-size: 0.9375rem;
+    font-weight: 400;
+    color: var(--color-ink-soft);
+    padding-block: 0.6rem;
+  }
+
+  .site-nav__link::after {
+    bottom: 0.15rem;
+    height: 1px;
+    opacity: 0.55;
+    transform-origin: center;
+  }
+
+  .site-header__actions {
+    gap: 1.5rem;
   }
 
   .site-header__phone {
-    display: inline;
+    display: flex;
+    padding-inline-end: 1.5rem;
+    border-inline-end: 1px solid var(--color-border);
+  }
+
+  .site-header__phone-label {
+    color: var(--color-faint);
+  }
+
+  .site-header__phone-number {
+    font-size: 1rem;
+    font-weight: 500;
   }
 
   .site-header__call,
@@ -285,15 +394,25 @@
     display: none;
   }
 
-  .site-header.is-over-hero {
-    color: inherit;
+  .site-header__cta {
+    min-height: 2.85rem;
+    padding-inline: 1.45rem;
+    font-size: 0.8125rem;
+    letter-spacing: 0.06em;
+    border-radius: 0;
   }
 
-  .site-header.is-over-hero .brand__text strong {
+  .site-header.is-over-hero .site-header__phone {
+    border-inline-end-color: rgba(246, 243, 238, 0.22);
+  }
+
+  .site-header.is-over-hero .brand__fa,
+  .site-header.is-over-hero .site-header__phone-number {
     color: var(--color-on-inverse);
   }
 
-  .site-header.is-over-hero .brand__text small,
+  .site-header.is-over-hero .brand__en,
+  .site-header.is-over-hero .site-header__phone-label,
   .site-header.is-over-hero .site-nav__link {
     color: var(--color-on-inverse-muted);
   }
@@ -302,14 +421,67 @@
   .site-header.is-over-hero .site-nav__link.is-active {
     color: var(--color-on-inverse);
   }
+
+  .site-header.is-over-hero .site-header__cta {
+    border-color: rgba(246, 243, 238, 0.55);
+    color: var(--color-on-inverse);
+    background: transparent;
+  }
+
+  .site-header.is-over-hero .site-header__cta:hover {
+    background: var(--color-on-inverse);
+    color: var(--color-ink);
+    border-color: var(--color-on-inverse);
+  }
+
+  .site-header.is-over-hero.is-scrolled .site-header__cta {
+    border-color: var(--color-ink);
+    color: var(--color-ink);
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --header-h: 5.5rem;
+  }
+
+  .brand__fa {
+    font-size: 1.28rem;
+  }
+
+  .site-nav {
+    gap: 3.25rem;
+  }
+
+  .site-header__phone-number {
+    font-size: 1.05rem;
+  }
+
+  .site-header__actions {
+    gap: 1.85rem;
+  }
+
+  .site-header__phone {
+    padding-inline-end: 1.85rem;
+  }
 }
 
 @media (max-width: 360px) {
-  .brand__text small {
+  .brand__en {
     display: none;
   }
 
   .site-header__call {
     padding-inline: 0.6rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header,
+  .site-nav__link,
+  .site-nav__link::after,
+  .site-header__cta,
+  .site-header__phone-number {
+    transition: none;
   }
 }
