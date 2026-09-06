@@ -62,7 +62,7 @@ export default function Footer() {
 
       <div className="container--wide site-footer__bottom">
         <p>© {new Date().getFullYear()} {agency.name}. تمامی حقوق محفوظ است.</p>
-        <p className="meta">نمایشگاه دیجیتال املاک ممتاز</p>
+        <p className="meta">نمایشگاه دیجیتال املاک درخشان</p>
       </div>
     </footer>
   )
