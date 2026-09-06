@@ -18,7 +18,7 @@ export const agency = {
   address: 'کرج - مشکین دشت - خیابان هدایتکار - جنب فروشگاه افق کوروش',
 
   mapEmbed:
-    'https://www.openstreetmap.org/export/embed.html?bbox=51.415%2C35.795%2C51.435%2C35.810&layer=mapnik&marker=35.8025%2C51.425',
+    'https://www.openstreetmap.org/export/embed.html?bbox=50.920%2C35.745%2C50.950%2C35.765&layer=mapnik&marker=35.755%2C50.935',
 
   mapLink: 'https://maps.app.goo.gl/sjLmEwnzbJQmR5qQ6',
 

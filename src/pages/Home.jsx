@@ -13,9 +13,9 @@ import './Home.css'
 
 export default function Home() {
   useDocumentMeta({
-    title: 'املاک درخشان | خانه‌های ممتاز شمال تهران',
+    title: 'املاک درخشان | خانه‌های ممتاز کرج',
     description:
-      'املاک درخشان؛ آژانس تخصصی معرفی و ارائه املاک ممتاز در الهیه، فرشته، زعفرانیه، نیاوران و فرمانیه.',
+      'املاک درخشان؛ آژانس تخصصی معرفی و ارائه املاک ممتاز در مهرشهر، عظیمیه، مصباح، فردیس و دهقان‌ویلا.',
   })
 
   const featured = getFeaturedProperties(4)
@@ -35,30 +35,33 @@ export default function Home() {
         </div>
 
         <div className="container--wide home-hero__content">
-          <p className="eyebrow">North Tehran · Curated Living</p>
+          <p className="eyebrow">کرج · املاک منتخب</p>
           <h1 className="display">
             خانه‌هایی که
             <span> با دقت دیده شده‌اند</span>
           </h1>
           <p className="home-hero__lead">
-            املاک درخشان یک نمایشگاه دیجیتال برای املاک ممتاز است؛ انتخابی محدود،
-            ارائه دقیق، و مسیری روشن تا گفتگوی مستقیم با مشاور.
+            املاک درخشان یک نمایشگاه دیجیتال برای املاک ممتاز کرج است؛ انتخابی
+            محدود، ارائه دقیق، و مسیری روشن تا گفتگوی مستقیم با مشاور.
           </p>
           <div className="home-hero__actions">
             <Button to="/properties" size="lg">
               مشاهده املاک
             </Button>
-            <Button to="/about" variant="secondary" size="lg" className="home-hero__ghost">
-              فلسفه ما
+            <Button to="/contact" variant="secondary" size="lg" className="home-hero__ghost">
+              تماس با درخشان
             </Button>
           </div>
-          <div className="home-hero__stats">
-            {agency.stats.slice(0, 3).map((stat) => (
-              <div key={stat.label}>
-                <strong>{stat.value}</strong>
-                <span>{stat.label}</span>
-              </div>
-            ))}
+          <div className="home-hero__trust meta">
+            <span>مهرشهر</span>
+            <span aria-hidden="true">·</span>
+            <span>عظیمیه</span>
+            <span aria-hidden="true">·</span>
+            <span>مصباح</span>
+            <span aria-hidden="true">·</span>
+            <span>فردیس</span>
+            <span aria-hidden="true">·</span>
+            <span>دهقان‌ویلا</span>
           </div>
         </div>
       </section>
@@ -87,9 +90,9 @@ export default function Home() {
         <div className="container--wide home-discover__layout">
           <Reveal>
             <SectionHeading
-              eyebrow="کاوش"
+              eyebrow="کاوش محله"
               title="محله‌هایی که می‌شناسیم"
-              description="تمرکز ما روی چند منطقه کلیدی شمال تهران است؛ جایی که جزئیات محله به‌اندازه خود ملک اهمیت دارد."
+              description="تمرکز ما روی چند منطقه کلیدی کرج است؛ جایی که جزئیات محله به‌اندازه خود ملک اهمیت دارد."
             />
             <ul className="home-locations">
               {agency.locations.map((item) => (
@@ -145,6 +148,14 @@ export default function Home() {
                   <span>بدون حساب کاربری؛ فقط تماس شفاف با مشاور.</span>
                 </li>
               </ul>
+              <div className="home-agency__stats">
+                {agency.stats.slice(0, 3).map((stat) => (
+                  <div key={stat.label}>
+                    <strong>{stat.value}</strong>
+                    <span>{stat.label}</span>
+                  </div>
+                ))}
+              </div>
               <Button to="/about" variant="secondary">
                 بیشتر درباره درخشان
               </Button>
@@ -194,7 +205,7 @@ export default function Home() {
 
       <CTASection
         title="برای ملک مناسب، گفتگو کافی است"
-        description="اگر به‌دنبال خانه‌ای خاص در شمال تهران هستید، همین حالا با تیم درخشان در ارتباط باشید."
+        description="اگر به‌دنبال خانه‌ای خاص در کرج هستید، همین حالا با تیم درخشان در ارتباط باشید."
         primary={{ to: '/contact', label: 'صفحه تماس' }}
         secondary={{ href: agency.whatsapp, label: 'پیام در واتساپ' }}
       />
