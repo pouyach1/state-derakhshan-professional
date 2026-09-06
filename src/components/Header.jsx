@@ -8,7 +8,7 @@ const links = [
   { to: '/', label: 'خانه', end: true },
   { to: '/properties', label: 'املاک' },
   { to: '/about', label: 'درباره ما' },
-  { to: '/contact', label: 'تماس' },
+  { to: '/contact', label: 'تماس با ما' },
 ]
 
 export default function Header() {
@@ -18,7 +18,7 @@ export default function Header() {
   const overHero = pathname === '/' && !scrolled && !open
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 16)
+    const onScroll = () => setScrolled(window.scrollY > 24)
     onScroll()
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
@@ -62,8 +62,8 @@ export default function Header() {
         <Link to="/" className="brand" onClick={close} aria-label={agency.name}>
           <span className="brand__mark" aria-hidden="true" />
           <span className="brand__text">
-            <strong>{agency.name}</strong>
-            <small>{agency.nameEn}</small>
+            <strong className="brand__fa">{agency.name}</strong>
+            <small className="brand__en">Derakhshan Real Estate</small>
           </span>
         </Link>
 
@@ -83,8 +83,9 @@ export default function Header() {
         </nav>
 
         <div className="site-header__actions">
-          <a className="site-header__phone meta" href={agency.phoneHref}>
-            {agency.phone}
+          <a className="site-header__phone" href={agency.phoneHref} dir="ltr">
+            <span className="site-header__phone-label">تماس مستقیم</span>
+            <span className="site-header__phone-number">{agency.phone}</span>
           </a>
           <a
             className="site-header__call"
@@ -93,9 +94,9 @@ export default function Header() {
           >
             تماس
           </a>
-          <Button to="/contact" size="sm" className="site-header__cta">
-            مشاوره
-          </Button>
+          <Link to="/properties" className="site-header__cta">
+            مشاهده املاک
+          </Link>
           <button
             type="button"
             className="menu-toggle"
