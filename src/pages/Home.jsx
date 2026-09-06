@@ -13,9 +13,9 @@ import './Home.css'
 
 export default function Home() {
   useDocumentMeta({
-    title: 'املاک درخشان | خانه‌های ممتاز شمال تهران',
+    title: 'املاک درخشان | خانه‌های ممتاز کرج',
     description:
-      'املاک درخشان؛ آژانس تخصصی معرفی و ارائه املاک ممتاز در الهیه، فرشته، زعفرانیه، نیاوران و فرمانیه.',
+      'املاک درخشان؛ آژانس تخصصی معرفی و ارائه املاک ممتاز در مهرشهر، عظیمیه، مصباح، فردیس و دهقان‌ویلا.',
   })
 
   const featured = getFeaturedProperties(4)
@@ -35,7 +35,7 @@ export default function Home() {
         </div>
 
         <div className="container--wide home-hero__content">
-          <p className="eyebrow">North Tehran · Curated Living</p>
+          <p className="eyebrow">Karaj · Curated Living</p>
           <h1 className="display">
             خانه‌هایی که
             <span> با دقت دیده شده‌اند</span>
@@ -89,7 +89,7 @@ export default function Home() {
             <SectionHeading
               eyebrow="کاوش"
               title="محله‌هایی که می‌شناسیم"
-              description="تمرکز ما روی چند منطقه کلیدی شمال تهران است؛ جایی که جزئیات محله به‌اندازه خود ملک اهمیت دارد."
+              description="تمرکز ما روی چند منطقه کلیدی کرج است؛ جایی که جزئیات محله به‌اندازه خود ملک اهمیت دارد."
             />
             <ul className="home-locations">
               {agency.locations.map((item) => (
@@ -194,7 +194,7 @@ export default function Home() {
 
       <CTASection
         title="برای ملک مناسب، گفتگو کافی است"
-        description="اگر به‌دنبال خانه‌ای خاص در شمال تهران هستید، همین حالا با تیم درخشان در ارتباط باشید."
+        description="اگر به‌دنبال خانه‌ای خاص در کرج هستید، همین حالا با تیم درخشان در ارتباط باشید."
         primary={{ to: '/contact', label: 'صفحه تماس' }}
         secondary={{ href: agency.whatsapp, label: 'پیام در واتساپ' }}
       />
